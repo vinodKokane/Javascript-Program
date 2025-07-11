@@ -26,7 +26,7 @@ Input: nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
 // -100 <= nums[i] <= 100
 // nums is sorted in non-decreasing order.
 
-// Input: nums = [1, 1, 2]
+Input: nums = [1, 1, 2]
 function removeDuplicates(nums) {
     // const filterNums = nums.filter((num, index) => {
     //     // if (index === nums.indexOf(num)) {
@@ -42,13 +42,13 @@ function removeDuplicates(nums) {
     //     return index === nums.indexOf(num);
     // })
     // console.log(filterNums);
-    // let k = 1;
-    // for (let i = 1; i < nums.length; i++) {
-    //     if (nums[i] !== nums[i - 1]) {
-    //         nums[k] = nums[i];
-    //         k++;
-    //     }
-    // }
-    // return k;
+    let k = 1;
+    for (let i = 1; i < nums.length; i++) {
+        if (nums[i] !== nums[i - 1]) {
+            nums[k] = nums[i];
+            k++;
+        }
+    }
+    return k;
 }
-removeDuplicates(nums);
+console.log(removeDuplicates(nums));
